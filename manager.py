@@ -239,27 +239,27 @@ class Gui:
 
         self.root.config(menu=menubar)
 
-        load_save_button = tk.Button(self.menu_left, text="Load Save", padx=10, pady=5, fg="white",
+        load_save_button = tk.Button(self.menu_left, text="Load Save", padx=10, pady=5, fg="black",
                                      bg=self.button_color, command=self.load_save)
-        self.track_run_button = tk.Button(self.menu_left, text="Toggle Tracking", padx=10, pady=5, fg="white",
+        self.track_run_button = tk.Button(self.menu_left, text="Toggle Tracking", padx=10, pady=5, fg="black",
                                           bg=self.button_color,
                                           command=self.toggle_tracking)
-        save_run_button = tk.Button(self.menu_left, text="Save Last File", padx=10, pady=5, fg="white",
+        save_run_button = tk.Button(self.menu_left, text="Save Last File", padx=10, pady=5, fg="black",
                                     bg=self.button_color,
                                     command=self.save_file)
 
         self.version_text = tk.StringVar()
-        self.switch_version_button = tk.Button(self.menu_left, textvariable=self.version_text, padx=10, pady=5, fg="white",
+        self.switch_version_button = tk.Button(self.menu_left, textvariable=self.version_text, padx=10, pady=5, fg="black",
                                           bg=self.button_color,
                                           command=self.change_version)
 
 
 
-        open_saves_button = tk.Button(self.menu_left, text="Open Saves Folder", padx=10, pady=5, fg="white",
+        open_saves_button = tk.Button(self.menu_left, text="Open Saves Folder", padx=10, pady=5, fg="black",
                                       bg=self.button_color,
                                       command=self.open_saves_folder)
 
-        open_current_button = tk.Button(self.menu_left, text="Open Current Folder", padx=10, pady=5, fg="white",
+        open_current_button = tk.Button(self.menu_left, text="Open Current Folder", padx=10, pady=5, fg="black",
                                         bg=self.button_color,
                                         command=self.open_current_folder)
 
@@ -272,17 +272,17 @@ class Gui:
         self.switch_version_button.pack(fill="x")
 
 
-        end_run_button = tk.Button(self.menu_left, text="End Run", padx=10, pady=5, fg="white",
+        end_run_button = tk.Button(self.menu_left, text="End Run", padx=10, pady=5, fg="black",
                                      bg=self.button_color, command=self.end_run)
 
-        upload_run_button = tk.Button(self.menu_left, text="Upload Run", padx=10, pady=5, fg="white",
+        upload_run_button = tk.Button(self.menu_left, text="Upload Run", padx=10, pady=5, fg="black",
                                      bg=self.button_color, command=self.load_save)
 
         #end_run_button.pack(fill="x")
         #upload_run_button.pack(fill="x")
 
 
-        test_button = tk.Button(self.menu_left, text="Test", padx=10, pady=5, fg="white", bg=self.button_color,
+        test_button = tk.Button(self.menu_left, text="Test", padx=10, pady=5, fg="black", bg=self.button_color,
                                 command=self.test_read)
         #test_button.pack()
 
