@@ -57,10 +57,10 @@ class Gui:
         self.title_frame_overview = tk.Frame(self.root, height=1800, bg="#dfdfdf", borderwidth=1, relief="ridge")
         self.title_frame_detail = tk.Frame(self.root, height=1800, bg="#dfdfdf", borderwidth=1, relief="ridge")
 
-        self.title_overview = tk.Label(self.title_frame_overview, text="Run Overview", bg="#dfdfdf", anchor="w")
+        self.title_overview = tk.Label(self.title_frame_overview, text="Run Overview", bg="#dfdfdf", anchor="w", fg="black")
         #self.title_overview.pack()
 
-        self.title_detail = tk.Label(self.title_frame_detail, text="Current Run", bg="#dfdfdf", anchor="w")
+        self.title_detail = tk.Label(self.title_frame_detail, text="Current Run", bg="#dfdfdf", anchor="w", fg="black")
         self.title_detail.pack()
 
         self.canvas_area_overview = tk.Canvas(self.root, width=1000, height=1800, background="#ffffff")
@@ -69,36 +69,36 @@ class Gui:
         self.canvas_area_upload = tk.Canvas(self.root, width=self.c_width, height=self.c_height, background="#ffffff")
         #self.canvas_area_upload.grid(row=2, column=1)
 
-        self.ship_class_label = tk.Label(self.canvas_area_upload, text="Ship Class")
+        self.ship_class_label = tk.Label(self.canvas_area_upload, text="Ship Class", fg="black")
         self.ship_class_text = tk.StringVar()
-        self.ship_class_value = tk.Label(self.canvas_area_upload, textvariable=self.ship_class_text)
+        self.ship_class_value = tk.Label(self.canvas_area_upload, textvariable=self.ship_class_text, fg="black")
 
 
         self.ship_class_label.grid(row=0, column=0)
         self.ship_class_value.grid(row=0, column=1)
 
-        self.ship_variant_label = tk.Label(self.canvas_area_upload, text="Ship Variant")
+        self.ship_variant_label = tk.Label(self.canvas_area_upload, text="Ship Variant", fg="black")
         self.ship_variant_text = tk.StringVar()
-        self.ship_variant_value = tk.Label(self.canvas_area_upload, textvariable=self.ship_variant_text)
+        self.ship_variant_value = tk.Label(self.canvas_area_upload, textvariable=self.ship_variant_text, fg="black")
 
         self.ship_variant_label.grid(row=1, column=0)
         self.ship_variant_value.grid(row=1, column=1)
 
-        self.result_label = tk.Label(self.canvas_area_upload, text="Result")
+        self.result_label = tk.Label(self.canvas_area_upload, text="Result", fg="black")
         self.result_text = tk.StringVar()
-        self.result_value = tk.Label(self.canvas_area_upload, textvariable=self.result_text)
+        self.result_value = tk.Label(self.canvas_area_upload, textvariable=self.result_text, fg="black")
 
         self.result_label.grid(row=2, column=0)
         self.result_value.grid(row=2, column=1)
 
-        self.uploaded_label = tk.Label(self.canvas_area_upload, text="Uploaded")
+        self.uploaded_label = tk.Label(self.canvas_area_upload, text="Uploaded", fg="black")
         self.uploaded_text = tk.StringVar()
-        self.uploaded_value = tk.Label(self.canvas_area_upload, textvariable=self.uploaded_text)
+        self.uploaded_value = tk.Label(self.canvas_area_upload, textvariable=self.uploaded_text, fg="black")
 
         self.uploaded_label.grid(row=2, column=0)
         self.uploaded_value.grid(row=2, column=1)
 
-        self.result_label = tk.Label(self.canvas_area_upload, text="Result")
+        self.result_label = tk.Label(self.canvas_area_upload, text="Result", fg="black")
         self.result_entry = tk.Entry(self.canvas_area_upload)
 
         self.result_label.grid(row=3, column=0)
