@@ -116,10 +116,10 @@ class Gui:
         self.title_frame_inventory = tk.Frame(self.root, height=1800, bg="#dfdfdf", borderwidth=1, relief="ridge")
         self.title_frame_graph = tk.Frame(self.root, height=1800, bg="#dfdfdf", borderwidth=1, relief="ridge")
 
-        self.title_inventory = tk.Label(self.title_frame_inventory, text="Inventory", bg="#dfdfdf", anchor="w")
+        self.title_inventory = tk.Label(self.title_frame_inventory, text="Inventory", bg="#dfdfdf", anchor="w", fg="black")
         self.title_inventory.pack()
 
-        self.title_graph = tk.Label(self.title_frame_graph, text="Scrap per Sector", bg="#dfdfdf", anchor="w")
+        self.title_graph = tk.Label(self.title_frame_graph, text="Scrap per Sector", bg="#dfdfdf", anchor="w", fg="black")
         self.title_graph.pack()
 
         self.canvas_area_inventory = tk.Canvas(self.root, width=self.c_width, height=self.c_height, background="#ffffff", borderwidth=1, relief="sunken")
