@@ -377,10 +377,10 @@ class Gui:
         pass
 
     def open_saves_folder(self):
-        os.startfile(self.saves_db_path)
+        os.system('open %s' % self.saves_db_path)
 
     def open_current_folder(self):
-        os.startfile(self.saves_new_path)
+        os.system('open %s' % self.saves_new_path)
 
     def update_inventory(self):
         self.run_inventory.delete(*self.run_inventory.get_children())
@@ -423,9 +423,9 @@ class Gui:
             # draw the bar
             self.canvas_area_graph.create_rectangle(x0, y0, x1, y1, fill="red")
             # put the y value above each bar
-            self.canvas_area_graph.create_text(x0, y0, anchor=tk.SW, text=str(y))
+            self.canvas_area_graph.create_text(x0, y0, anchor=tk.SW, text=str(y), fill="black")
             msg = "S" + str(x+1)
-            self.canvas_area_graph.create_text(x0, y1, anchor=tk.NW, text=msg)
+            self.canvas_area_graph.create_text(x0, y1, anchor=tk.NW, text=msg, fill="black")
 
         for x, y in enumerate(self.savegame.run.sector_scrap_stuff):
             # calculate rectangle coordinates (integers) for each bar
@@ -436,7 +436,7 @@ class Gui:
             # draw the bar
             self.canvas_area_graph.create_rectangle(x0, y0, x1, y1, fill="blue")
             # put the y value above each bar
-            self.canvas_area_graph.create_text(x0+2, y0, anchor=tk.SW, text=str(y))
+            self.canvas_area_graph.create_text(x0+2, y0, anchor=tk.SW, text=str(y), fill="black")
 
 
     def update_run_overview(self):
@@ -492,6 +492,10 @@ class Gui:
     def track_file(self):
         self.update_statusbar("")  # clear status bar
         if self.tracking:
+            print('target_path')
+            print(self.target_path)
+            print('exists')
+            print(os.path.exists(self.target_path))
             if os.path.exists(self.target_path) and not self.savegame.mv or os.path.exists(self.target_path_mv) and self.savegame.mv:
                 try:
                     self.savegame.parse()
